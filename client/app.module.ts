@@ -5,8 +5,9 @@ import {BrowserModule} from '@angular/platform-browser';
 import {RouterModule} from '@angular/router';
 import {HttpModule} from '@angular/http';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {AppComponent} from './app/app.component';
 
-import {HomePageComponent} from './app/home-page.component';
+import {HomePageComponent} from './homepage/home-page.component';
 //import {WelcomeComponent} from './welcome/welcome.component';
 //import {AccountListComponent} from './account-list/account-list.component';
 
@@ -14,8 +15,8 @@ import {enableProdMode} from '@angular/core';
 enableProdMode();
 
 const routing = RouterModule.forRoot([
-    { path: '',      component: HomePageComponent },
-    //{ path: 'account-list', component: AccountListComponent }
+    { path: '', component: HomePageComponent }
+    //1{ path: 'account-list', component: AccountListComponent }
 ]);
 
 @NgModule({
@@ -24,10 +25,9 @@ const routing = RouterModule.forRoot([
     		  HttpModule,
     		  FormsModule,
     		  ReactiveFormsModule],
-    declarations: [HomePageComponent,
-    			               ],
+    declarations: [HomePageComponent,AppComponent ],
     //providers: [],
-    bootstrap: [HomePageComponent]
+    bootstrap: [AppComponent]
 })
 
 export class AppModule {}
