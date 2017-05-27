@@ -27,5 +27,5 @@ app.use(function (req, res, next) {
 });
 
 app.listen(app.get('port'), function() {
-    console.log('Odyssey App fullstack listening on port '+app.get('port'));
+    console.log('Angular2 fullstack listening on port '+app.get('port'));
 });

@@ -5,18 +5,19 @@ import {BrowserModule} from '@angular/platform-browser';
 import {RouterModule} from '@angular/router';
 import {HttpModule} from '@angular/http';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {AppComponent} from './app/app.component';
 
+import {AppComponent} from './app/app.component';
+import {WelcomeComponent} from './welcome/welcome.component';
+import {AccountListComponent} from './account-list/account-list.component';
 import {HomePageComponent} from './homepage/home-page.component';
-//import {WelcomeComponent} from './welcome/welcome.component';
-//import {AccountListComponent} from './account-list/account-list.component';
 
 import {enableProdMode} from '@angular/core';
 enableProdMode();
 
 const routing = RouterModule.forRoot([
-    { path: '', component: HomePageComponent }
-    //1{ path: 'account-list', component: AccountListComponent }
+    {path: 'home', component: HomePageComponent},
+    { path: '',      component: WelcomeComponent },
+    { path: 'account-list', component: AccountListComponent }
 ]);
 
 @NgModule({
@@ -25,7 +26,11 @@ const routing = RouterModule.forRoot([
     		  HttpModule,
     		  FormsModule,
     		  ReactiveFormsModule],
-    declarations: [HomePageComponent,AppComponent ],
+    declarations: [AppComponent,
+    			   WelcomeComponent,
+    			   AccountListComponent,
+                   HomePageComponent
+             ],
     //providers: [],
     bootstrap: [AppComponent]
 })

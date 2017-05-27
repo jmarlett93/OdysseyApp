@@ -11,7 +11,7 @@ module.exports = {
   module: {
     loaders: [
       {test: /\.ts$/, loader: 'ts'},
-      {test: /\.html$/, loader: '.html'},
+      {test: /\.html$/, loader: 'raw'},
       {test: /\.css$/, loader: 'raw'}
     ]
   },
