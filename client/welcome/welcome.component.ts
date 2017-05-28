@@ -2,6 +2,6 @@ import {Component} from "@angular/core";
 
 @Component({
     selector:'welcome',
-    template: '<h1>Welcome to landing page</h1>'
+    template: require('./welcome.component.html')
 })
 export class WelcomeComponent{}

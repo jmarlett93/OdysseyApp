@@ -11,10 +11,22 @@ module.exports = {
   module: {
     loaders: [
       {test: /\.ts$/, loader: 'ts'},
-      {test: /\.html$/, loader: 'raw'},
-      {test: /\.css$/, loader: 'raw'}
+      {test: /\.html$/, loader: 'raw'}
     ]
-  },
+    },
+
+     module: {
+        rules: [{
+            test: /\.less$/,
+            use: [{
+                loader: "style-loader" // creates style nodes from JS strings
+            }, {
+                loader: "css-loader" // translates CSS into CommonJS
+            }, {
+                loader: "less-loader" // compiles Less to CSS
+            }]
+        }]
+    },
   resolve: {
     extensions: ['', '.js', '.ts', '.html', '.css']
   },

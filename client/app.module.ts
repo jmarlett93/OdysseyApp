@@ -6,7 +6,7 @@ import {RouterModule} from '@angular/router';
 import {HttpModule} from '@angular/http';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
-import {AppComponent} from './app/app.component';
+import {HeaderComponent} from './header/header.component';
 import {WelcomeComponent} from './welcome/welcome.component';
 import {AccountListComponent} from './account-list/account-list.component';
 import {HomePageComponent} from './homepage/home-page.component';
@@ -26,13 +26,13 @@ const routing = RouterModule.forRoot([
     		  HttpModule,
     		  FormsModule,
     		  ReactiveFormsModule],
-    declarations: [AppComponent,
+    declarations: [HeaderComponent,
     			   WelcomeComponent,
     			   AccountListComponent,
                    HomePageComponent
              ],
     //providers: [],
-    bootstrap: [AppComponent]
+    bootstrap: [HeaderComponent]
 })
 
 export class AppModule {}
