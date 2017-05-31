@@ -13,13 +13,12 @@ module.exports = {
       {test: /\.ts$/, loader: 'ts'},
       {test: /\.html$/, loader: 'raw'},
       {test: /\.less$/,
-       exclude: /node_modules/,
-       loader: 'raw-loader!less-loader' }
+       loader: 'style!css!less' }
     ]
   },
   
   resolve: {
-    extensions: ['', '.js', '.ts', '.html', '.css']
+    extensions: ['', '.js', '.ts', '.html', '.css', 'less']
   },
   plugins: [
     new HtmlWebpackPlugin({
