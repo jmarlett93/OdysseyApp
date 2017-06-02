@@ -10,15 +10,23 @@ module.exports = {
   },
   module: {
     loaders: [
-      {test: /\.ts$/, loader: 'ts'},
-      {test: /\.html$/, loader: 'raw'},
-      {test: /\.less$/,
-       loader: 'style!css!less' }
+      {test: /\.ts$/,
+        exclude: /node_modules/,
+         loader: 'ts'},
+      {test: /\.html$/,
+        exclude: /node_modules/,
+         loader: 'raw'},
+      {test: /\.css$/,
+        exclude: /node_modules/,
+         loader: 'css-loader'},
+       {test: /\.less$/,
+         exclude: /node_modules/,
+        loader: 'raw!less-loader'}
     ]
   },
-  
+
   resolve: {
-    extensions: ['', '.js', '.ts', '.html', '.css', 'less']
+    extensions: ['', '.js', '.ts', '.html', '.css', '.less']
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -30,5 +38,4 @@ module.exports = {
       }
     })
   ]
-
 };

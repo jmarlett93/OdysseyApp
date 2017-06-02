@@ -31,7 +31,6 @@ const routing = RouterModule.forRoot([
     			   AccountListComponent,
                    HomePageComponent
              ],
-    //providers: [],
     bootstrap: [HeaderComponent]
 })
 
