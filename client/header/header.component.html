@@ -1,13 +1,8 @@
 <div>
-    <nav class='navbar navbar-default'>
-        <div class='container-fluid'>
-            <a class='navbar-brand'>{{pageTitle}}</a>
-            <ul class='nav navbar-nav'>
-                <li class='title'><a [routerLink]="['/']">Odyssey App</a></li>
-            </ul>
-        </div>
-    </nav>
-    <div class='container'>
+    <div class='game-title-bar'>
+        <a class='title'>{{pageTitle}}Odyssey App</a>
+    </div>
+    <div class='app-container'>
         <router-outlet></router-outlet>
     </div>
 </div>

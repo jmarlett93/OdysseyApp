@@ -8,3 +8,16 @@ html, body, div, span, applet, object, iframe, a, abbr, acronym, address, big, c
   font-size: 16px;
   font-family: inherit;
   display: block; }
+
+html{
+  height: 100%;
+}
+body {
+    height:100%;
+    font-family: Arial, sans-serif;
+    background-color: transparent; }
+
+  .title{
+    height:50em;
+    font-size: 20em;
+  }
