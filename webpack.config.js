@@ -12,7 +12,9 @@ module.exports = {
     loaders: [
       {test: /\.ts$/, loader: 'ts'},
       {test: /\.html$/, loader: 'raw'},
-      {test: /\.css$/, loader: 'raw'}
+      // {test: /\.css$/,
+      //     use: ['style-loader', 'css-loader']
+      //   },
     ]
   },
   resolve: {

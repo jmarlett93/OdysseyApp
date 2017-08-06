@@ -8,7 +8,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 import {AppComponent} from './app/app.component';
 import {WelcomeComponent} from './welcome/welcome.component';
-import {AccountListComponent} from './account-list/account-list.component';
+import {HeaderComponent} from './header/header.component';
 import {HomePageComponent} from './homepage/home-page.component';
 
 import {enableProdMode} from '@angular/core';
@@ -17,7 +17,7 @@ enableProdMode();
 const routing = RouterModule.forRoot([
     {path: 'home', component: HomePageComponent},
     { path: '',      component: WelcomeComponent },
-    { path: 'account-list', component: AccountListComponent }
+    { path: 'account-list', component: HeaderComponent }
 ]);
 
 @NgModule({
@@ -28,7 +28,7 @@ const routing = RouterModule.forRoot([
     		  ReactiveFormsModule],
     declarations: [AppComponent,
     			   WelcomeComponent,
-    			   AccountListComponent,
+    			   HeaderComponent,
                    HomePageComponent
              ],
     //providers: [],
