@@ -1,20 +1,29 @@
-var webpack = require('webpack');
-var HtmlWebpackPlugin = require('html-webpack-plugin');
+let webpack = require('webpack');
+let HtmlWebpackPlugin = require('html-webpack-plugin');
+let ExtractTextPlugin = require('extract-text-webpack-plugin');
 
-module.exports = {
+config = {
 
   entry: './client/main.ts',
   output: {
-    path: './dist',
+    path: '/dist',
     filename: 'app.bundle.js'
   },
+  devtool: "source-map",
   module: {
-    loaders: [
+    rules: [
       {test: /\.ts$/, loader: 'ts'},
-      {test: /\.html$/, loader: 'raw'},
-      // {test: /\.css$/,
-      //     use: ['style-loader', 'css-loader']
-      //   },
+      {test: /\.html$/, loader: 'raw-loader'},
+       {test: /\.css$/,
+           use: [
+              {loader:'style-loader'},
+              {loader: 'css-loader',
+               options: { 
+                modules: true,
+                sourceMap: true}
+              }
+            ]
+         },
     ]
   },
   resolve: {
@@ -30,5 +39,6 @@ module.exports = {
       }
     })
   ]
-
 };
+
+module.exports = config;
